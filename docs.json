@@ -1,53 +1,380 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Pramaan",
+  "description": "One API, one key and one bill for the actions AI agents and apps need.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#e40532",
+    "light": "#ff5a78",
+    "dark": "#b8032a"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://www.pramaan.dev"
+  },
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "quickstart"
+            ]
+          }
         ]
+      },
+      {
+        "tab": "Superpowers",
+        "menu": [
+          {
+            "item": "Data",
+            "description": "Companies, people and contacts: research, lead lists, work emails and company signals.",
+            "openapi": {
+              "source": "specs/superpowers/data.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Social media",
+            "description": "Posts, profiles, comments and trends on every network, and posting from your accounts.",
+            "openapi": {
+              "source": "specs/superpowers/social-media.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "AI search and SEO",
+            "description": "Rankings, keywords, backlinks, and how AI answer engines see your brand.",
+            "openapi": {
+              "source": "specs/superpowers/ai-search-and-seo.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Advertising",
+            "description": "Your ad accounts, competitors' ads, audiences and creator deals.",
+            "openapi": {
+              "source": "specs/superpowers/advertising.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "News",
+            "description": "Headlines, articles and news feeds on any topic, company or market.",
+            "openapi": {
+              "source": "specs/superpowers/news.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Research",
+            "description": "Deep research, academic papers and answers that cite their sources.",
+            "openapi": {
+              "source": "specs/superpowers/research.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Legal",
+            "description": "Courts, cases, dockets, judges and statutes.",
+            "openapi": {
+              "source": "specs/superpowers/legal.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Web tools",
+            "description": "Read, scrape and watch any website, or drive a real browser.",
+            "openapi": {
+              "source": "specs/superpowers/web-tools.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "E-commerce",
+            "description": "Products, prices, reviews and marketplaces, through to shipping and tracking.",
+            "openapi": {
+              "source": "specs/superpowers/e-commerce.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Travel & places",
+            "description": "Maps, places, addresses, property, routes, weather and travel.",
+            "openapi": {
+              "source": "specs/superpowers/travel-and-places.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Finance",
+            "description": "Take payments, run billing, move money, handle tax and read the markets.",
+            "openapi": {
+              "source": "specs/superpowers/finance.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Crypto & DeFi",
+            "description": "Tokens, wallets, chains, DeFi yields and on-chain data.",
+            "openapi": {
+              "source": "specs/superpowers/crypto-and-defi.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Gen AI",
+            "description": "Make images, video, voice and music, and call language models.",
+            "openapi": {
+              "source": "specs/superpowers/gen-ai.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Email & calendar",
+            "description": "Send and read email, and book, run and sum up meetings.",
+            "openapi": {
+              "source": "specs/superpowers/email-and-calendar.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Phone & messaging",
+            "description": "Calls, AI phone agents, SMS, WhatsApp, chat and one-time codes.",
+            "openapi": {
+              "source": "specs/superpowers/phone-and-messaging.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Hiring & assessments",
+            "description": "Jobs, pay, candidates and proctored tests.",
+            "openapi": {
+              "source": "specs/superpowers/hiring-and-assessments.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Identity & security",
+            "description": "Verify people, stop fraud, run sign-in and check for threats.",
+            "openapi": {
+              "source": "specs/superpowers/identity-and-security.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Developer tools",
+            "description": "Code, deploys, storage, databases, workflows and documents.",
+            "openapi": {
+              "source": "specs/superpowers/developer-tools.json",
+              "directory": "superpowers"
+            }
+          },
+          {
+            "item": "Other",
+            "openapi": {
+              "source": "specs/superpowers/other.json",
+              "directory": "superpowers"
+            }
+          }
+        ]
+      },
+      {
+        "tab": "Missions",
+        "menu": [
+          {
+            "item": "Data",
+            "description": "Companies, people and contacts: research, lead lists, work emails and company signals.",
+            "openapi": {
+              "source": "specs/missions/data.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Social media",
+            "description": "Posts, profiles, comments and trends on every network, and posting from your accounts.",
+            "openapi": {
+              "source": "specs/missions/social-media.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "AI search and SEO",
+            "description": "Rankings, keywords, backlinks, and how AI answer engines see your brand.",
+            "openapi": {
+              "source": "specs/missions/ai-search-and-seo.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Advertising",
+            "description": "Your ad accounts, competitors' ads, audiences and creator deals.",
+            "openapi": {
+              "source": "specs/missions/advertising.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "News",
+            "description": "Headlines, articles and news feeds on any topic, company or market.",
+            "openapi": {
+              "source": "specs/missions/news.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Research",
+            "description": "Deep research, academic papers and answers that cite their sources.",
+            "openapi": {
+              "source": "specs/missions/research.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Legal",
+            "description": "Courts, cases, dockets, judges and statutes.",
+            "openapi": {
+              "source": "specs/missions/legal.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Web tools",
+            "description": "Read, scrape and watch any website, or drive a real browser.",
+            "openapi": {
+              "source": "specs/missions/web-tools.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "E-commerce",
+            "description": "Products, prices, reviews and marketplaces, through to shipping and tracking.",
+            "openapi": {
+              "source": "specs/missions/e-commerce.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Travel & places",
+            "description": "Maps, places, addresses, property, routes, weather and travel.",
+            "openapi": {
+              "source": "specs/missions/travel-and-places.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Finance",
+            "description": "Take payments, run billing, move money, handle tax and read the markets.",
+            "openapi": {
+              "source": "specs/missions/finance.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Crypto & DeFi",
+            "description": "Tokens, wallets, chains, DeFi yields and on-chain data.",
+            "openapi": {
+              "source": "specs/missions/crypto-and-defi.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Gen AI",
+            "description": "Make images, video, voice and music, and call language models.",
+            "openapi": {
+              "source": "specs/missions/gen-ai.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Email & calendar",
+            "description": "Send and read email, and book, run and sum up meetings.",
+            "openapi": {
+              "source": "specs/missions/email-and-calendar.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Phone & messaging",
+            "description": "Calls, AI phone agents, SMS, WhatsApp, chat and one-time codes.",
+            "openapi": {
+              "source": "specs/missions/phone-and-messaging.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Hiring & assessments",
+            "description": "Jobs, pay, candidates and proctored tests.",
+            "openapi": {
+              "source": "specs/missions/hiring-and-assessments.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Identity & security",
+            "description": "Verify people, stop fraud, run sign-in and check for threats.",
+            "openapi": {
+              "source": "specs/missions/identity-and-security.json",
+              "directory": "missions"
+            }
+          },
+          {
+            "item": "Developer tools",
+            "description": "Code, deploys, storage, databases, workflows and documents.",
+            "openapi": {
+              "source": "specs/missions/developer-tools.json",
+              "directory": "missions"
+            }
+          }
+        ]
+      },
+      {
+        "tab": "Platform API",
+        "openapi": {
+          "source": "specs/platform.json",
+          "directory": "platform"
+        }
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://www.pramaan.dev",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Agent skill",
+          "href": "https://www.pramaan.dev/skill.md",
+          "icon": "robot"
+        },
+        {
+          "anchor": "OpenAPI",
+          "href": "https://api.pramaan.dev/openapi.json",
+          "icon": "brackets-curly"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+  "api": {
+    "examples": {
+      "languages": [
+        "curl",
+        "javascript",
+        "python"
+      ]
+    }
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
-      }
-    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Get early access",
+      "href": "https://app.pramaan.dev"
     }
   },
   "contextual": {
@@ -61,12 +388,5 @@
       "cursor",
       "vscode"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }

@@ -1,33 +1,28 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
+# Pramaan docs
 
-# Documentation project instructions
+Mintlify site for the Pramaan API. Configuration lives in `docs.json`; guide pages are MDX.
 
-## About this project
+## API reference
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
-- Pages are MDX files with YAML frontmatter
-- Configuration lives in `docs.json`
-- Use the Mintlify MCP server, `https://mcp.mintlify.com`, to edit content and settings via MCP
-- Use the Mintlify docs MCP server, `https://www.mintlify.com/docs/mcp`, to query information about using Mintlify via MCP
+The Superpowers, Missions and Platform API tabs are generated. Do not edit `specs/` or those
+tabs in `docs.json` by hand. Rebuild them from the live API:
 
-## Terminology
+```bash
+node scripts/build-api.mjs
+```
 
-{/* Add product-specific terms and preferred usage */}
-{/* Example: Use "workspace" not "project", "member" not "user" */}
+It reads `https://api.pramaan.dev/openapi.json` and sorts each operation into the same
+categories as www.pramaan.dev, using its public catalogue files. One spec file per category
+keeps each page small; a single file made every page about 7 MB.
 
-## Style preferences
+## Words
 
-{/* Add any project-specific style rules below */}
+- "Superpower" for one action, "mission" for a multi-step job. The API paths say
+  `capabilities` and `outcomes`; use those words only when quoting a path or field.
+- Prices are in US dollars.
 
-- Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
-- Use sentence case for headings
-- Bold for UI elements: Click **Settings**
-- Code formatting for file names, commands, paths, and code references
+## Style
 
-## Content boundaries
-
-{/* Define what should and shouldn't be documented */}
-{/* Example: Don't document internal admin features */}
+- Plain words, active voice, second person.
+- Sentence case headings.
+- Code formatting for ids, paths, headers and commands.
